@@ -1,4 +1,4 @@
-package Algotihm;
+package Algorihm;
 
 public class ProgramHere {
     //Hi my friends
