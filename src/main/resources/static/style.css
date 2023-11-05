@@ -1,0 +1,40 @@
+html {
+    box-sizing: border-box;
+    background-color: #E0E1DD;
+    font-family: 'Prompt', sans-serif;
+}
+
+.dataItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #778DA9;
+
+}
+
+.dataItems input {
+    margin: 10px;
+    padding: 5px;
+    font-family: 'Prompt', sans-serif;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.itemsButton:hover {
+    background-color: #E0E1DD;
+}
+.quantum{
+    display: flex;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #778DA9;
+}

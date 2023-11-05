@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeQuantum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Hola mundo</h1>
+    <header>
+        <h1>TimeQuantum</h1>
+    </header>
+    <section>
+        <div class="dataItems">
+            <h3>Put the number of items to process</h3>
+            <input type="number" name="itemsData" id="itemsData" class="itemsNumber">
+            <input type="button" value="Send" name="itemsButton" id="itemsButton" class="itemsButton">
+        </div>
+        <!-- Probably here goes the javascript code -->
+
+        <div class="quantum">
+            <h3>Chose a name</h3>
+            <input type="text" name="quantumText" id="quantumText" class="quantumText">
+            <h3>Chose the Quantum</h3>
+            <input type="number" name="quantumNumber" id="quantumNumber">
+        </div>
+
+        <!-- And it ends here -->
+    </section>
+    <footer>
+        <h4>Created by</h4>
+        <li>Nicolay</li>
+    </footer>
 </body>
+<script src="app.js"></script>
+
 </html>
