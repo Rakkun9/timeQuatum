@@ -17,3 +17,13 @@ function addToList() {
     textNumber.value = "";
   }
 }
+function addTimeQuantum() {
+  let quantumNumber = document.getElementById("quantumFinalNumber");
+  if (quantumNumber.value === "") {
+    alert("You have to put quantum number");
+  }
+  if (quantumNumber.value <= 0) {
+    alert("You have to put a number higher than cero");
+  }
+  quantumNumber.value = "";
+}

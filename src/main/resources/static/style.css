@@ -8,6 +8,11 @@ header h1 {
     text-align: center;
 }
 
+section {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
 .dataItems {
     display: flex;
     flex-direction: column;
@@ -16,8 +21,7 @@ header h1 {
     text-align: center;
     border: 2px solid black;
     border-radius: 10px;
-    margin-left: 20%;
-    margin-right: 20%;
+
     background-color: #778DA9;
     margin-bottom: 20px;
 
@@ -44,8 +48,6 @@ header h1 {
     text-align: center;
     border: 2px solid black;
     border-radius: 10px;
-    margin-left: 20%;
-    margin-right: 20%;
     background-color: #778DA9;
 }
 
@@ -74,4 +76,49 @@ header h1 {
 
 .quantumButton:hover {
     background-color: #E0E1DD;
+}
+
+.container {
+    display: flex;
+}
+
+.quantumClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 3%;
+    background-color: #778DA9;
+}
+
+.quantumClass input {
+    margin: 10px;
+    padding: 5px;
+    font-family: 'Prompt', sans-serif;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.quantumList {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 3%;
+    background-color: #778DA9;
+    width: 500px ;
+}
+
+.quantumList ul {
+    text-decoration: none;
+    padding: 0;
+    margin-left: 8px;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    list-style-type: none;
+
 }
