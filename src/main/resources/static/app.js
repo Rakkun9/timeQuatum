@@ -27,3 +27,27 @@ function addTimeQuantum() {
   }
   quantumNumber.value = "";
 }
+function sendData() {
+  const listStringData = document.getElementById('textList').value;
+  //const listIntData = document.getElementById('dato2').value;
+
+  const datos = {
+    dato1: listStringData,
+    //dato2: listIntData
+  };
+
+  fetch('/processData', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(datos)
+  })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+}

@@ -12,44 +12,44 @@
 </head>
 
 <body>
-    <header>
-        <h1>TimeQuantum</h1>
-    </header>
-    <section>
-        <div class="dataItems">
-            <h3>Put the number of items to process</h3>
-            <input type="number" name="itemsData" id="itemsData" class="itemsNumber">
-            <input type="button" value="Send" name="itemsButton" id="itemsButton" class="itemsButton">
+<header>
+    <h1>TimeQuantum</h1>
+</header>
+<section>
+    <div class="dataItems">
+        <h3>Put the number of items to process</h3>
+        <input type="number" name="itemsData" id="itemsData" class="itemsNumber">
+        <input type="button" value="Send" name="itemsButton" id="itemsButton" class="itemsButton">
+    </div>
+    <!-- Probably here goes the javascript code -->
+    <div class="container">
+        <div class="quantum">
+            <h3>Chose a name</h3>
+            <input type="text" name="quantumText" id="quantumText" class="quantumText">
+            <h3>Chose the time</h3>
+            <input type="number" name="quantumNumber" id="quantumNumber" class="quantumText">
+            <input type="button" value="Send" class="quantumButton" onclick="addToList()">
         </div>
-        <!-- Probably here goes the javascript code -->
-        <div class="container">
-            <div class="quantum">
-                <h3>Chose a name</h3>
-                <input type="text" name="quantumText" id="quantumText" class="quantumText">
-                <h3>Chose the time</h3>
-                <input type="number" name="quantumNumber" id="quantumNumber" class="quantumText">
-                <input type="button" value="Send" class="quantumButton" onclick="addToList()">
-            </div>
-            <div class="quantumClass">
-                <h3>Choose the Quantum</h3>
-                <input type="number" name="quantumFinalNumber" id="quantumFinalNumber" class="quantumFinalNumber">
-                <input type="button" value="Send" name="quantumFinalButton" id="quantumFinalButton"
-                    class="quantumFinalButton" onclick="addTimeQuantum()">
-            </div>
-            <div class="quantumList">
-                <h3>List of the elemets</h3>
-                <ul id="textList"></ul>
-            </div>
-
+        <div class="quantumClass">
+            <h3>Choose the Quantum</h3>
+            <input type="number" name="quantumFinalNumber" id="quantumFinalNumber" class="quantumFinalNumber">
+            <input type="button" value="Send" name="quantumFinalButton" id="quantumFinalButton"
+                   class="quantumFinalButton" onclick="addTimeQuantum()">
         </div>
+        <div class="quantumList">
+            <h3>List of the elemets</h3>
+            <ul id="textList"></ul>
+        </div>
+        <input type="button" value="Send" name="SendAll" id="sendAll" class="sendAll" onclick="sendData()">
+    </div>
 
 
-    </section>
+</section>
 
-    <footer>
-        <h4>Created by</h4>
-        <li>Nicolay</li>
-    </footer>
+<footer>
+    <h4>Created by</h4>
+    <li>Nicolay</li>
+</footer>
 </body>
 <script src="app.js"></script>
 
