@@ -1,53 +1,62 @@
+let list = [];
+let quantumSendNumber = 0;
+
 function addToList() {
-  let textInput = document.getElementById("quantumText");
-  let textNumber = document.getElementById("quantumNumber");
-  let textList = document.getElementById("textList");
+    let textInput = document.getElementById("quantumText").value;
+    let textNumber = document.getElementById("quantumNumber").value;
+    let textList = document.getElementById("textList");
 
-  if (textInput.value === "" || textNumber.value === "") {
-    alert("One of the fiels is empty");
-  } else {
-    let newItem = document.createElement("li");
-    newItem.textContent = textInput.value;
-    textList.appendChild(newItem);
-    textInput.value = "";
+    if (textInput === "" || textNumber === "") {
+        alert("One of the fields is empty");
+    } else {
+        let newItem = document.createElement("li");
+        newItem.textContent = textInput;
+        textList.appendChild(newItem);
 
-    let newItem2 = document.createElement("li");
-    newItem2.textContent = textNumber.value;
-    textList.appendChild(newItem2);
-    textNumber.value = "";
-  }
+        let newItem2 = document.createElement("li");
+        newItem2.textContent = textNumber;
+        textList.appendChild(newItem2);
+
+        list.push(textInput);
+        list.push(textNumber);
+    }
 }
+
 function addTimeQuantum() {
-  let quantumNumber = document.getElementById("quantumFinalNumber");
-  if (quantumNumber.value === "") {
-    alert("You have to put quantum number");
-  }
-  if (quantumNumber.value <= 0) {
-    alert("You have to put a number higher than cero");
-  }
-  quantumNumber.value = "";
+    let quantumNumber = document.getElementById("quantumFinalNumber").value;
+
+    if (quantumNumber === "") {
+        alert("You have to put the quantum number");
+    } else if (quantumNumber <= 0) {
+        alert("You have to put a number greater than zero");
+    } else {
+        quantumSendNumber = quantumNumber;
+    }
 }
-function sendData() {
-  const listStringData = document.getElementById('textList').value;
-  //const listIntData = document.getElementById('dato2').value;
 
-  const datos = {
-    dato1: listStringData,
-    //dato2: listIntData
-  };
+async function sendData() {
+    const datos = {
+        dato1: list,
+        dato2: quantumSendNumber
+    };
 
-  fetch('/processData', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(datos)
-  })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
+    const requst = await fetch('api/dataProcesada', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(datos)
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Respuesta del servidor', data.message);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+
+
+
+
 }
